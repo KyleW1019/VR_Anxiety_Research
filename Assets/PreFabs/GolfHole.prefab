@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6152738665793315183}
   - component: {fileID: 1742975607380285608}
   - component: {fileID: 5218512594811093365}
+  - component: {fileID: 8587873976628704319}
   m_Layer: 0
   m_Name: GolfHole
   m_TagString: Untagged
@@ -97,3 +98,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8587873976628704319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497668164419683938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622f88daf30fbfc4f92c3c142f637369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
