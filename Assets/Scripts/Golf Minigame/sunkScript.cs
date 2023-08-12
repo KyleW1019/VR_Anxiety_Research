@@ -8,7 +8,7 @@ public int holeNum;
 
 public GameObject golfBall;
 
-public Vector3 hole2;
+public Vector3 nextHole;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +26,10 @@ public Vector3 hole2;
         {
             print("ball has sunk");
             holeNum = holeNum + 1;
-            if (holeNum == 2)
-            {
-                GameObject.Instantiate(golfBall, hole2, Quaternion.identity);
-            }
+            //if (holeNum == 2)
+            //{
+                GameObject.Instantiate(golfBall, nextHole, Quaternion.identity);
+            //}
         }
         
     }
