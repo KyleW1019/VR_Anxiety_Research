@@ -1493,6 +1493,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "SineWaveController",
+            "id": "019eaf46-e72a-4016-92de-185bc0cc8e4a",
+            "actions": [
+                {
+                    "name": "Toggle",
+                    "type": "Button",
+                    "id": "026ad728-3f57-4820-9a23-e709924eae09",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4106a302-ecc9-44e6-81a5-6fcf545ddb68",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

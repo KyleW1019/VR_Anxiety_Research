@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Sinewave : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class Sinewave : MonoBehaviour
     public float lasty;
 
     public Boolean on_off_bool = true;
+
+    public InputActionReference toggleReference = null;
     
 
     //public float breathTime = 12 / 60;
@@ -32,8 +35,14 @@ public class Sinewave : MonoBehaviour
     {
         myLineRenderer = GetComponent<LineRenderer>();
         myLineRenderer.SetWidth(.2f, .2f);
+        toggleReference.action.started += Toggle; 
     }
 
+    private void Toggle(InputAction.CallbackContext context)
+    {
+        bool isActive = !gameObject.activeSelf;
+        gameObject.SetActive(isActive);
+    }
     void Draw()
     {
         xStart = 0;
@@ -62,22 +71,20 @@ public class Sinewave : MonoBehaviour
         }
     }
 
-    void on_off_controller()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (on_off_bool)
-            {
-                on_off_bool = false;
-                myLineRenderer.SetWidth(0f,0f);
-            }
-            else
-            {
-                on_off_bool = true;
-                myLineRenderer.SetWidth(.2f, .2f);
-            }
-        }
-    }
+    //void on_off_controller()
+   // {
+       // if (on_off_bool)
+            //{
+                //on_off_bool = false;
+                //myLineRenderer.SetWidth(0f,0f);
+            //}
+       // else
+            //{
+                //on_off_bool = true;
+                //myLineRenderer.SetWidth(.2f, .2f);
+            //}
+        
+    //}
     // Update is called once per frame
     void Update()
     {
@@ -85,6 +92,6 @@ public class Sinewave : MonoBehaviour
         {
             Draw();
         }
-        on_off_controller();
+        //on_off_controller();
     }
 }
