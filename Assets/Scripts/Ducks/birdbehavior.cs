@@ -11,12 +11,12 @@ public class birdbehavior : MonoBehaviour
     {
         birdrb = GetComponent<Rigidbody>();
         
-        speed = 10.0f;
+        speed = 50.0f;
     }
 
     private void Update()
     {
-        birdrb.AddForce(Vector3.forward * speed);
+        birdrb.AddForce(Vector3.forward * speed);     
         
     }
 }
