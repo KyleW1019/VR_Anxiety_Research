@@ -10,6 +10,8 @@ public class characterDialog : MonoBehaviour
     public CutTree CutTreeScript;
     public GameObject diaglogBox;
     public GameObject dialogBox2;
+    public numTrees nt;
+    
 
     
     
@@ -33,7 +35,7 @@ public class characterDialog : MonoBehaviour
     void Update()
     {
         dist = Vector3.Distance(player.transform.position, transform.position);
-        if (dist < 3)
+        if (dist < 3 && secondBool != true)
         {
             displayDialog = true;
         }
@@ -47,14 +49,16 @@ public class characterDialog : MonoBehaviour
             diaglogBox.GetComponent<MeshRenderer>().enabled = true;
         }
 
-        if (CutTreeScript.numberOfSwings > 1)
+        if (nt.numTreesCut >= 10)
         {
             secondBool = true;
         }
 
         if (secondBool)
         {
-            dialogBox2.GetComponent<MeshRenderer>().enabled = false;
+            displayDialog = false;
+            diaglogBox.GetComponent<MeshRenderer>().enabled = false;
+            dialogBox2.GetComponent<MeshRenderer>().enabled = true;
         }
     }
 }

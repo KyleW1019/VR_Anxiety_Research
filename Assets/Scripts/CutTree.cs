@@ -12,6 +12,8 @@ public class CutTree : MonoBehaviour
     public GameObject axe;
     public int numberOfSwings;
     public bool logSpawned = false;
+    public int treescut = 0;
+    
     void Start()
     {
 
@@ -30,7 +32,10 @@ public class CutTree : MonoBehaviour
             {
                 GameObject.Instantiate(log, new Vector3(tree.transform.position.x, tree.transform.position.y + 1, tree.transform.position.z), tree.transform.rotation);
                 logSpawned = true;
+                treescut = treescut + 1;
             }
+
+            treescut = 0;
         }
     }
 
