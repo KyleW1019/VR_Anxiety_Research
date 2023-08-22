@@ -7,6 +7,7 @@ public class birdSpawn : MonoBehaviour
     public GameObject bird;
     public GameObject spawner;
     private int numBirds;
+    public int rot;
     
     private Vector3 birdSpawnPoint;
     private Vector3 birdSpawnPoint2;
@@ -40,35 +41,36 @@ public class birdSpawn : MonoBehaviour
     void spawnBird()
     {
         numBirds = Random.Range(1, 6);
+        rot = Random.Range(0, 360);
         if (numBirds == 1)
         {
-            Instantiate(bird, birdSpawnPoint, Quaternion.identity);
+            Instantiate(bird, birdSpawnPoint, Quaternion.Euler(0,rot,0));
         }
         else if (numBirds == 2)
         {
-            Instantiate(bird, birdSpawnPoint, Quaternion.identity);
-            Instantiate(bird, birdSpawnPoint2, Quaternion.identity);
+            Instantiate(bird, birdSpawnPoint, Quaternion.Euler(0,rot,0));
+            Instantiate(bird, birdSpawnPoint2, Quaternion.Euler(0,rot,0));
         }
         else if (numBirds == 3)
         {
-            Instantiate(bird, birdSpawnPoint, Quaternion.identity);
-            Instantiate(bird, birdSpawnPoint2, Quaternion.identity);
-            Instantiate(bird, birdSpawnPoint3, Quaternion.identity);
+            Instantiate(bird, birdSpawnPoint, Quaternion.Euler(0,rot,0));
+            Instantiate(bird, birdSpawnPoint2, Quaternion.Euler(0,rot,0));
+            Instantiate(bird, birdSpawnPoint3, Quaternion.Euler(0,rot,0));
         }
         else if (numBirds == 4)
         {
-            Instantiate(bird, birdSpawnPoint, Quaternion.identity);
-            Instantiate(bird, birdSpawnPoint2, Quaternion.identity);
-            Instantiate(bird, birdSpawnPoint3, Quaternion.identity);
-            Instantiate(bird, birdSpawnPoint4, Quaternion.identity);
+            Instantiate(bird, birdSpawnPoint, Quaternion.Euler(0,rot,0));
+            Instantiate(bird, birdSpawnPoint2, Quaternion.Euler(0,rot,0));
+            Instantiate(bird, birdSpawnPoint3, Quaternion.Euler(0,rot,0));
+            Instantiate(bird, birdSpawnPoint4, Quaternion.Euler(0,rot,0));
         }
         else if (numBirds == 5)
         {
-            Instantiate(bird, birdSpawnPoint, Quaternion.identity);
-            Instantiate(bird, birdSpawnPoint2, Quaternion.identity);
-            Instantiate(bird, birdSpawnPoint3, Quaternion.identity);
-            Instantiate(bird, birdSpawnPoint4, Quaternion.identity);
-            Instantiate(bird, birdSpawnPoint5, Quaternion.identity);
+            Instantiate(bird, birdSpawnPoint, Quaternion.Euler(0,rot,0));
+            Instantiate(bird, birdSpawnPoint2, Quaternion.Euler(0,rot,0));
+            Instantiate(bird, birdSpawnPoint3, Quaternion.Euler(0,rot,0));
+            Instantiate(bird, birdSpawnPoint4, Quaternion.Euler(0,rot,0));
+            Instantiate(bird, birdSpawnPoint5, Quaternion.Euler(0,rot,0));
         }
         
         else

@@ -16,7 +16,8 @@ public class birdbehavior : MonoBehaviour
 
     private void Update()
     {
-        birdrb.AddForce(Vector3.forward * speed);     
+        //birdrb.AddForce(Vector3.forward * speed);     
+        transform.Translate(transform.forward * Time.deltaTime, Space.World);
         
     }
 }
