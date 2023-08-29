@@ -6,6 +6,14 @@ TagManager:
   tags:
   - CinemachineTarget
   - Tree
+  - Water
+  - Crate
+  - Lemon
+  - Apple
+  - Peach
+  - Pear
+  - Strawberry
+  - Avocado
   layers:
   - Default
   - TransparentFX
