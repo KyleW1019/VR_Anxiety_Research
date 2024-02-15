@@ -25,7 +25,7 @@ public class testGolf : MonoBehaviour
     }
     void Hitball(GameObject ball)
     {
-        Vector3 hitDirection = ((ball.transform.position - transform.position) * -90).normalized;
+        Vector3 hitDirection = ((ball.transform.position - transform.position)).normalized;
         //Vector3 hitDirection = transform.forward;
         // Get the Rigidbody component of the ball
         Rigidbody ballRigidbody = ball.GetComponent<Rigidbody>();

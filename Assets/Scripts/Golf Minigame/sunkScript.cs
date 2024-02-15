@@ -8,11 +8,14 @@ public int holeNum;
 
 public GameObject golfBall;
 
-public Vector3 nextHole;
+    public Vector3 nextHole;
+    //public GameObject holeLoc;
+
     // Start is called before the first frame update
     void Start()
     {
         holeNum = 1;
+    
     }
 
     // Update is called once per frame
@@ -22,7 +25,8 @@ public Vector3 nextHole;
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name.Equals("GolfBall (1)"))
+        //if (other.gameObject.name.Equals("GolfBall (1)"))
+        if(other.CompareTag("Ball"))
         {
             print("ball has sunk");
             holeNum = holeNum + 1;

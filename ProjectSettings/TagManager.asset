@@ -15,6 +15,7 @@ TagManager:
   - Strawberry
   - Avocado
   - Ball
+  - Hole
   layers:
   - Default
   - TransparentFX

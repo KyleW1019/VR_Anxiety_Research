@@ -41,7 +41,8 @@ public class hitScript : MonoBehaviour
                 //ball_s.AddRelativeForce(-Vector3.forward * 100);
                 
         }
-        else if (other.gameObject.name.Equals("GolfHole (1)"))
+        //else if (other.gameObject.name.Equals("GolfHole (1)"))
+        else if(other.CompareTag("Hole"))
         {
             ball.gameObject.GetComponent<MeshRenderer>().enabled = false;
         }
