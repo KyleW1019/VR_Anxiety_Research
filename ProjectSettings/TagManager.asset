@@ -16,6 +16,7 @@ TagManager:
   - Avocado
   - Ball
   - Hole
+  - Rock
   layers:
   - Default
   - TransparentFX

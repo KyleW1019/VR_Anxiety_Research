@@ -32,7 +32,7 @@ public GameObject golfBall;
             holeNum = holeNum + 1;
             //if (holeNum == 2)
             //{
-                GameObject.Instantiate(golfBall, nextHole, Quaternion.identity);
+                //GameObject.Instantiate(golfBall, nextHole, Quaternion.identity);
             //}
         }
         
